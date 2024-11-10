@@ -1,5 +1,17 @@
 /* Base Styles */
 
+
+/* Importación de fuente desde Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap');
+
+/* Definición de variables de color */
+
+:root {
+    --heading-font: 'Noto Sans', sans-serif;
+    --paragraph-font: 'Oswald', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +20,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--paragraph-font);
     line-height: 1.6;
     background-color: #f4f4f4;
 }
@@ -26,6 +38,15 @@ header {
 header h1 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
 }
 
 header span {
@@ -59,6 +80,7 @@ nav {
 }
 
 nav a {
+    font-family: var(--heading-font);
     color: #ffffff;
     text-decoration: none;
     font-size: 1em;
