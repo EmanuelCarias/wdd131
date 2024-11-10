@@ -102,6 +102,19 @@ main {
     background-color: #ffffff;
 }
 
+section img {
+    width: 150px;
+    height: auto;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+img {
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+}
+
 .card {
     background-color: #f7f9fc;
     padding: 1.5em;
