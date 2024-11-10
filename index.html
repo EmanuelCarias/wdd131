@@ -2,13 +2,71 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags and document setup -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, inicial-scale=1.0">
-    <title>WDD 131 🐱‍🚀</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Emanuel Juan de Dios Carías</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Emanuel Juan de Dios Carías. Keywords: web development, dynamic pages, fundamentals">
+    <meta name="author" content="Emanuel Juan de Dios Carías">
 </head>
 
 <body>
-    <h1>WDD 131-BYU KLK🐱‍👤</h1>
+
+    <!-- Header with navigation -->
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/emanuelcarias" target="_blank">LinkedIn Profile</a></li>
+                <li><a href="https://byui.instructure.com/" target="_blank">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a></li>
+                <li><a href="#final-project">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content with sections -->
+    <main>
+        <section class="card">
+            <h2>Introduction to Web Fundamentals</h2>
+            <p>This course introduces the basics of dynamic web design, including HTML, CSS, and JavaScript.</p>
+            <img src="images/intro.jpg" alt="Introduction Image">
+            <p>Resources:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Web Development Projects</h2>
+            <p>Explore various projects that demonstrate the fundamentals of web development.</p>
+            <img src="images/projects.jpg" alt="Projects Image">
+            <p>Resources:</p>
+            <ul>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://codepen.io/">CodePen</a></li>
+                <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer with dynamic content -->
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Emanuel Juan de Dios Carías, Guatemala</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- JavaScript for dynamic year and last modified date -->
+    <script>
+        // Display the current year
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+        // Display the last modified date of the document
+        document.getElementById('lastModified').textContent = 'Last modified: ' + document.lastModified;
+    </script>
+
 </body>
 
 </html>
