@@ -102,17 +102,25 @@ main {
     background-color: #ffffff;
 }
 
-section img {
-    width: 150px;
-    height: auto;
-    float: right;
-    margin: 0 0 1rem 1rem;
-}
-
 img {
     border: 1px solid steelblue;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+}
+
+.text-image-container {
+    display: flex;
+    align-items: center;
+    /* Aligns image and text vertically in the center */
+    gap: 20px;
+    /* Space between the text and image */
+}
+
+.text-image-container img {
+    flex-shrink: 0;
+    /* Prevents the image from shrinking */
+    border-radius: 8px;
+    /* Optional: adds rounded corners to the image */
 }
 
 .card {
@@ -140,6 +148,10 @@ img {
     max-width: 100%;
     border-radius: 8px;
     margin-top: 1em;
+    width: 150px;
+    height: auto;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 
