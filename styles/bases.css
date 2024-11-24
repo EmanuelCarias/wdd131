@@ -1,9 +1,36 @@
+/* Importación de fuente desde Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap');
+
+/* Definición de variables de color */
+
 :root {
+    --heading-font: 'Noto Sans', sans-serif;
+    --paragraph-font: 'Oswald', sans-serif;
     --primary-color: #0066cc;
     --secondary-color: #f9f9f9;
     --text-color: #333;
     --background-color: #f9f9f9;
     --font-family: Arial, sans-serif;
+}
+
+
+/* Usando pseudo-elemento para el icono del clima */
+
+#weather::after {
+    content: "🌦️";
+    /* Icono de clima */
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
 }
 
 * {
@@ -13,7 +40,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--paragraph-font);
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.5;
