@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Lugar Favorito</title>
+    <link rel="stylesheet" href="styles/bases.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Place Title</h1>
+    </header>
+    <main>
+        <section id="hero">
+            <picture>
+                <source srcset="images/ave_guatemela.webp" media="(min-width: 768px)">
+                <img src="images/ave_guatemela.webp" alt="Imagen del lugar">
+            </picture>
+        </section>
+        <section id="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Label:</strong> Value</li>
+                <li><strong>Label:</strong> Value</li>
+                <li><strong>Label:</strong> Value</li>
+            </ul>
+        </section>
+        <section id="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temperature">10°C</span></li>
+                <li><strong>Wind Speed:</strong> <span id="wind-speed">5 km/h</span></li>
+                <li><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Standard Footer Content - Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
