@@ -1,6 +1,6 @@
 :root {
     --primary-color: #0066cc;
-    --secondary-color: #ffcc00;
+    --secondary-color: #f9f9f9;
     --text-color: #333;
     --background-color: #f9f9f9;
     --font-family: Arial, sans-serif;
@@ -49,9 +49,86 @@ h2 {
     vertical-align: middle;
 }
 
+
+/* Secciones sobre la imagen */
+
+#data {
+    position: absolute;
+    /* Los coloca sobre la imagen */
+    top: 50%;
+    /* Centra verticalmente */
+    left: 15%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Alinea el centro de los elementos con el centro de la imagen */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    /* Centra el texto dentro */
+    z-index: 10;
+    /* Asegura que se muestre por encima de la imagen */
+}
+
+#weather {
+    position: absolute;
+    /* Los coloca sobre la imagen */
+    top: 90%;
+    /* Centra verticalmente */
+    left: 80%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Alinea el centro de los elementos con el centro de la imagen */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    /* Centra el texto dentro */
+    z-index: 10;
+    /* Asegura que se muestre por encima de la imagen */
+}
+
 footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--secondary-color);
     color: #333;
+}
+
+
+/* Estilo para centrar los elementos en la pantalla */
+
+#new-data,
+#new-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Ocultar las secciones en pantallas pequeñas */
+
+@media (max-width: 768px) {
+    #data,
+    #weather {
+        display: none;
+        /* Las oculta completamente */
+    }
+}
+
+
+/* Estilo para los elementos ocultos en pantallas grandes */
+
+@media (min-width: 768px) {
+    #new-data,
+    #new-weather {
+        display: none;
+        /* Oculta las secciones 'data' y 'weather' en pantallas grandes */
+    }
 }
