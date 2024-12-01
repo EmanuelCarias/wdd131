@@ -69,7 +69,8 @@ const temples = [{
 
 // Elementos clave
 const container = document.getElementById("temple-cards-container");
-const navButtons = document.querySelectorAll("button[data-filter]");
+//const navButtons = document.querySelectorAll("button[data-filter]");
+const navButtons = document.querySelectorAll("a[data-filter]");
 const filterTitle = document.getElementById("filter-title");
 // Generar tarjetas de templos
 function displayTemples(filter = "all") {

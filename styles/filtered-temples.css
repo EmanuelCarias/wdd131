@@ -63,7 +63,7 @@ nav ul.visible {
 }
 
 nav a:hover {
-    background-color: purple;
+    background-color: #35424a;
     /* Cambia el fondo del enlace */
     color: white;
     /* Cambia el color del texto */
