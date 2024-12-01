@@ -1,0 +1,10 @@
+/* Estilos para pantallas más grandes */
+
+nav ul {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.temples-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}

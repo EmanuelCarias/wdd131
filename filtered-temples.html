@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="WDD 131 - W02 Assignment: Picture Album - Emanuel Juan de Dios Carías.This assignment applies the concepts presented in the learning activities to a picture album page that is responsive in small and larger views.">
+    <meta name="author" content="Emanuel Juan de Dios Carías">
+    <!-- Enlaces a CSS -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <ul>
+                <li><button data-filter="all">Home</button></li>
+                <li><button data-filter="old">Old</button></li>
+                <li><button data-filter="new">New</button></li>
+                <li><button data-filter="large">Large</button></li>
+                <li><button data-filter="small">Small</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="filter-title">Home</h2>
+        <!-- Sección de imágenes del templo -->
+        <section class="temples-grid gallery">
+            <div id="temple-cards-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 😎 Emanuel Juan de Dios Carías, 💻 Lima, Perú</p>
+        <p id="lastModified"></p>
+    </footer>
+    <!-- Archivo JavaScript -->
+    <script defer src="scripts/filtered-temples.js"></script>
+</body>
+
+</html>
