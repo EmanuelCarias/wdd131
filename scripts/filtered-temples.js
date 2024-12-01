@@ -130,5 +130,6 @@ navButtons.forEach((button) => {
     });
 });
 
+
 // Mostrar todos al cargar
 displayTemples();
