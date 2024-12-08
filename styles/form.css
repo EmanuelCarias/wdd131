@@ -180,7 +180,14 @@ footer p {
 
 .optional {
     color: #1976D2;
-    /* Gold color for modified date */
+    /* Gold color for modified date  style="display: flex; align-items: center; gap: 20px;"*/
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Gold color for modified date  style="display: flex; align-items: center; gap: 20px;"*/
 }
 
 main {
