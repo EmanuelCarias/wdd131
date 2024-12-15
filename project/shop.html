@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repostería Artesanal</title>
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/regular.css" />
+    <script defer src="../scripts/carrusel.js"></script>
+    <!--<script defer src="../scripts/form.js"></script>-->
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Menú Desplegable -->
+        <div id="menu-popup" class="menu-popup">
+            <div class="menu-content">
+                <a href="../project/in.html">Home</a>
+                <a href="../project/allbum.html">Catalog</a>
+                <a href="../project/shop.html">Shop</a>
+            </div>
+        </div>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="../project/in.html">Home</a></li>
+                <li><a href="../project/allbum.html">Catalog</a></li>
+                <li><a href="../project/shop.html">Shop</a></li>
+            </ul>
+        </nav>
+        <button class="header-btn">Button</button>
+    </header>
+    <!-- Main Content <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Imagen del lugar">
+            </picture>-->
+    <main>
+        <section>
+            <h2>Personaliza tu Pedido</h2>
+            <form action="submit_pedido.php" method="POST">
+                <label for="tipo_postre">Tipo de Postre:</label>
+                <select id="tipo_postre" name="tipo_postre" required>
+                    <option value="pastel">Pastel</option>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="galletas">Galletas</option>
+                </select>
+
+                <label for="sabores">Sabores:</label>
+                <input type="text" id="sabores" name="sabores" placeholder="Ejemplo: Chocolate, Fresa" required>
+
+                <label for="mensaje">Mensaje Personalizado:</label>
+                <input type="text" id="mensaje" name="mensaje" placeholder="Feliz Cumpleaños, etc.">
+
+                <label for="fecha">Fecha de Entrega:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">LOGO</div>
+            <div class="footer-placeholder"></div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+/* General Styles */
+
+
+/* Importación de fuente desde Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap');
+:root {
+    --heading-font: 'Noto Sans', sans-serif;
+    --paragraph-font: 'Oswald', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    font-family: var(--paragraph-font);
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5a623;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: #d2691e;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #d2691e;
+    font-weight: bold;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.primary-btn {
+    background: #333;
+    color: #fff;
+}
+
+.secondary-btn {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background: #e9ecef;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-image .image-placeholder {
+    width: 300px;
+    height: 200px;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.hero-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Section */
+
+.section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.text-placeholder {
+    width: 150px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-placeholder {
+    width: 100px;
+    height: 10px;
+    background: #ddd;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #35424a;
+    color: #ffffff;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 668px) {
+    header {
+        flex-direction: row;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-image .image-placeholder {
+        margin-top: 20px;
+    }
+    .section-content {
+        flex-direction: column;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+/* Menú Pop-up */
+
+.menu-popup {
+    position: fixed;
+    /* Fijo en toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    /* Fondo oscuro */
+    display: none;
+    /* Ocultar por defecto */
+    justify-content: center;
+    /* Centra el contenido */
+    align-items: center;
+    z-index: 1000;
+    /* Sobre el resto del contenido */
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Espacio entre los enlaces */
+}
+
+.menu-content a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s;
+}
+
+.menu-content a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+@media (max-width: 667px) {
+    header {
+        padding: 10px;
+    }
+    .hero {
+        padding: 20px 10px;
+    }
+    .section {
+        padding: 20px 10px;
+    }
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    .header-btn {
+        display: none;
+        flex-direction: column;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    /* Agrega espacio entre el elemento y el borde inferior */
+}
+
+.carousel img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+
+/* Estilos para el contenido sobre las imágenes */
+
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    /* Para colocar el contenido sobre las imágenes */
+}
+
+.carousel-content h1,
+.carousel-content p,
+.carousel-content button {
+    margin: 10px;
+}
+
+.instagram {
+    --pading-horizontal: 16px;
+    --border: 1px solid var(--primary);
+    max-width: var(--max-width-post);
+    width: 100%;
+    border: var(--border);
+    border-radius: 20px;
+}
+
+.instagram__media {
+    display: flex;
+    border-bottom: var(--border);
+}
+
+.instagram__media .img {
+    max-width: 100%;
+    height: 61.2vh;
+}

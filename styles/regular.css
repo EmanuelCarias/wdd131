@@ -1,0 +1,46 @@
+/* styles/form.css */
+
+
+/* Importación de fuente desde Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap');
+:root {
+    --heading-font: 'Noto Sans', sans-serif;
+    --paragraph-font: 'Oswald', sans-serif;
+}
+
+
+/* Reset básico */
+
+body {
+    font-family: --paragraph-font;
+    line-height: 1.6;
+    background-color: #fff9f5;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: #d2691e;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.producto {
+    border: 1px solid #f5a623;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+}

@@ -2,8 +2,8 @@ from PIL import Image
 import os
 
 # Carpeta de las imágenes
-input_folder = "optimized_images/"
-output_folder = "project\images"
+input_folder = r"images\convertido"
+output_folder = r"images\porconvertir"
 
 # Crear la carpeta de salida si no existe
 os.makedirs(output_folder, exist_ok=True)
