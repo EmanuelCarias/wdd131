@@ -1,91 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Review Form</title>
-    <meta name="description" content="WDD 131: Dynamic Web Fundamentals - Emanuel Juan de Dios Carías,W05 Assignment: Product Review Form;Create product review form page using good form design given specific field requirements and submission confirmation with a counter. Ensure that the form is user friendly on both mobile and desktop screens...">
-    <meta name="author" content="Emanuel Juan de Dios Carías">
-    <link rel="stylesheet" href="../styles/form.css">
-    <script defer src="../scripts/form.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repostería Artesanal</title>
+    <link rel="stylesheet" href="../styles/home.css" />
+    <script defer src="../scripts/carrusel.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <!--<script defer src="../scripts/form.js"></script>-->
+
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <h1>Product Review</h1>
+        <!-- Menú Desplegable -->
+        <div id="menu-popup" class="menu-popup">
+            <div class="menu-content">
+                <a href="../project/index.html">Home</a>
+                <a href="../project/allbum.html">Catalog</a>
+                <a href="../project/shop.html">Shop</a>
+            </div>
+        </div>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="../project/index.html">Home</a></li>
+                <li><a href="../project/allbum.html">Catalog</a></li>
+                <li><a href="../project/shop.html">Shop</a></li>
+            </ul>
+        </nav>
+        <button class="header-btn">Button</button>
     </header>
+    <!-- Main Content <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Imagen del lugar">
+            </picture>-->
     <main>
-        <form action="review.html" method="get">
-            <fieldset>
-                <legend>Review Product</legend>
+        <!-- Hero Section -->
+        <div class="carousel">
+            <div class="instagram__media">
+                <img src="../images/guatemala_city_guatemala_temple_lds.webp" alt="Imagen 1" class="carousel-img" media="(min-width: 768px)">
+                <img src="../images/ave_guatemela.jpg" alt="Imagen 2" class="carousel-img" media="(min-width: 768px)">
+                <img src="../images/cake_loco.png" alt="Imagen 3" class="carousel-img" media="(min-width: 768px)">
+            </div>
 
-                <!-- Product Name -->
-                <label for="product">Product Name:</label>
-                <select id="product" name="product" required>
-                    <option value="" disabled selected>Select a Product ...</option>
-                </select>
+            <!-- Contenido sobre las imágenes -->
+            <div class="carousel-content">
+                <h1>Main Header</h1>
+                <p>Subheader</p>
+                <div class="hero-buttons">
+                    <button class="primary-btn">Button</button>
+                    <button class="secondary-btn">Button</button>
+                </div>
+                <!-- Llamada a la acción -->
+                <!--<button onclick="window.location.href='contact.html'">Contact us</button>-->
+            </div>
+        </div>
 
-                <!-- Overall Rating -->
-                <fieldset>
-                    <legend>Overall Rating:</legend>
-                    <div class="star-rating">
-                        <input type="radio" name="stars" id="star-a" value="5" required />
-                        <label for="star-a"></label>
-
-                        <input type="radio" name="stars" id="star-b" value="4" />
-                        <label for="star-b"></label>
-
-                        <input type="radio" name="stars" id="star-c" value="3" />
-                        <label for="star-c"></label>
-
-                        <input type="radio" name="stars" id="star-d" value="2" />
-                        <label for="star-d"></label>
-
-                        <input type="radio" name="stars" id="star-e" value="1" />
-                        <label for="star-e"></label>
-                    </div>
-                </fieldset>
-
-                <!-- Date of Installation -->
-                <label for="installation-date">Date of Installation:</label>
-                <input type="date" id="installation-date" name="installation-date" required>
-
-                <!-- Useful Features -->
-                <fieldset class="features">
-                    <legend>Useful Features:<span class="optional"> (Check all that aplly)</span></legend>
-                    <label for="feature-1">
-                        <input type="checkbox" id="feature-1" name="features" value="Feature 1"> Durability
-                    </label>
-                    <label for="feature-2">
-                        <input type="checkbox" id="feature-2" name="features" value="Feature 2"> Ease of use
-                    </label>
-                    <label for="feature-3">
-                        <input type="checkbox" id="feature-3" name="features" value="Feature 3"> Performance
-                    </label>
-                    <label for="feature-4">
-                        <input type="checkbox" id="feature-4" name="features" value="Feature 4">Design
-                    </label>
-                </fieldset>
-
-                <!-- Written Review -->
-                <label for="written-review">Write a Review:<span class="optional"> (Optional)</span></label>
-                <textarea id="written-review" name="written-review" rows="4" placeholder="Enter your review here..."></textarea>
-
-                <!-- User Name -->
-                <label for="user-name">Your Name:<span class="optional"> (Optional)</span></label>
-                <input type="text" id="user-name" name="user-name" placeholder="Enter your name">
-
-                <!-- Submit Button -->
-                <button type="submit">Submit Review</button>
-            </fieldset>
-        </form>
+        <!-- Section -->
+        <section class="section">
+            <h2>Section</h2>
+            <div class="section-content">
+                <div class="text-placeholder"></div>
+                <div class="text-placeholder"></div>
+            </div>
+            <button class="primary-btn">Button</button>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="currentyear"></span> 😎 Emanuel Juan de Dios Carías, 💻 Lima, Perú</p>
-        <p id="lastModified"></p>
+        <div class="footer-content">
+            <div class="logo">LOGO</div>
+            <div class="footer-placeholder"></div>
+        </div>
     </footer>
 </body>
+
+</html>
